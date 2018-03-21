@@ -1,3 +1,4 @@
-file '/var/www/html/index.html' do
-	content 'Hello World'
+hostname = node['hostname']
+file '/etc/motd' do
+	content "Welcome #{hostname}"
 end
